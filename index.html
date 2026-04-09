@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>M&M Epoxy Coatings – Epoxy Flooring Specialists, Long Island NY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e2c97e;
+      --dark: #111111;
+      --dark2: #1a1a1a;
+      --dark3: #222222;
+      --white: #ffffff;
+      --gray: #888888;
+      --light-bg: #f5f3ef;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
+
+```
+/* TOP BAR */
+.topbar { background: var(--dark2); border-bottom: 1px solid #2a2a2a; padding: 8px 40px; display: flex; justify-content: flex-end; align-items: center; gap: 32px; font-size: 13px; color: #aaa; }
+.topbar a { color: #aaa; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+.topbar a:hover { color: var(--gold); }
+.topbar .social-icons { display: flex; gap: 16px; }
+.topbar .contact-info { display: flex; gap: 24px; }
+
+/* NAV */
+nav { position: sticky; top: 0; z-index: 1000; background: rgba(17,17,17,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid #2a2a2a; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 72px; }
+.nav-logo img { height: 52px; }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a { text-decoration: none; color: #ccc; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; transition: color .2s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { background: var(--gold); color: var(--dark); font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 10px 24px; text-decoration: none; transition: background .2s; }
+.nav-cta:hover { background: var(--gold-light); }
+
+/* HERO */
+.hero { position: relative; min-height: 90vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.3) 100%), url('https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68144a2adde4a4b9f6f197f2.jpeg') center/cover no-repeat; }
+.hero-content { position: relative; z-index: 2; max-width: 700px; padding: 80px 40px 80px 80px; }
+.hero-badge { display: inline-block; background: var(--gold); color: var(--dark); font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; margin-bottom: 24px; }
+.hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(60px, 8vw, 110px); line-height: .95; letter-spacing: 2px; color: var(--white); margin-bottom: 12px; }
+.hero h1 span { color: var(--gold); }
+.hero-sub { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 24px; }
+.hero p { font-size: 16px; line-height: 1.7; color: #ccc; max-width: 480px; margin-bottom: 40px; }
+.hero-tagline { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); margin-bottom: 36px; }
+.hero-tagline span { color: var(--gold); margin: 0 8px; }
+.btn-primary { display: inline-block; background: var(--gold); color: var(--dark); font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 16px 40px; text-decoration: none; transition: background .2s, transform .15s; }
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-outline { display: inline-block; border: 2px solid var(--gold); color: var(--gold); font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 14px 38px; text-decoration: none; margin-left: 16px; transition: background .2s, color .2s, transform .15s; }
+.btn-outline:hover { background: var(--gold); color: var(--dark); transform: translateY(-2px); }
+.hero-strip { position: absolute; right: 0; top: 0; bottom: 0; width: 38%; display: grid; grid-template-rows: repeat(3,1fr); overflow: hidden; }
+.hero-strip img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.7); }
+
+/* STATS */
+.stats-bar { background: var(--gold); display: grid; grid-template-columns: repeat(3,1fr); }
+.stat-item { padding: 28px 32px; text-align: center; border-right: 1px solid rgba(0,0,0,.15); }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--dark); line-height: 1; }
+.stat-label { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(0,0,0,.65); margin-top: 4px; }
+
+/* SECTION COMMON */
+section { padding: 96px 40px; }
+.section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(42px, 5vw, 72px); line-height: 1; letter-spacing: 1px; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+/* ABOUT */
+.about { background: var(--dark2); }
+.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-img-wrap { position: relative; }
+.about-img-wrap img { width: 100%; height: 500px; object-fit: cover; }
+.about-img-badge { position: absolute; bottom: -20px; right: -20px; background: var(--gold); color: var(--dark); padding: 24px 28px; text-align: center; }
+.about-img-badge .num { font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 1; }
+.about-img-badge .lbl { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+.about-text { padding-left: 20px; }
+.about-text p { color: #aaa; line-height: 1.8; margin-top: 20px; margin-bottom: 28px; font-size: 15px; }
+
+/* PROCESS */
+.process { background: var(--dark); }
+.process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; margin-top: 60px; }
+.process-step { background: var(--dark3); padding: 48px 32px; position: relative; overflow: hidden; transition: background .3s; }
+.process-step:hover { background: #2a2a2a; }
+.process-step::before { content: attr(data-num); font-family: 'Bebas Neue', sans-serif; font-size: 120px; color: rgba(201,168,76,.06); position: absolute; top: -10px; right: -10px; line-height: 1; }
+.step-num { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.process-icon { font-size: 36px; margin-bottom: 20px; }
+.process-step h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+.process-step p { color: #888; font-size: 14px; line-height: 1.7; }
+
+/* SERVICES */
+.services { background: var(--light-bg); }
+.services .section-title { color: var(--dark); }
+.services .section-label { color: #8a6f30; }
+.services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 56px; }
+.service-card { background: var(--white); padding: 40px 32px; border-bottom: 4px solid transparent; transition: border-color .3s, transform .2s, box-shadow .2s; }
+.service-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,.1); }
+.service-card .icon { font-size: 40px; margin-bottom: 20px; }
+.service-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 1px; color: var(--dark); margin-bottom: 12px; text-transform: uppercase; }
+.service-card p { color: #666; font-size: 14px; line-height: 1.7; }
+
+/* WHY US */
+.why-us { background: var(--dark2); }
+.why-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; margin-top: 60px; }
+.why-item { background: var(--dark3); padding: 48px 40px; display: flex; gap: 24px; align-items: flex-start; transition: background .2s; }
+.why-item:hover { background: #2a2a2a; }
+.why-icon { width: 56px; height: 56px; flex-shrink: 0; background: var(--gold); color: var(--dark); display: flex; align-items: center; justify-content: center; font-size: 22px; }
+.why-item h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+.why-item p { color: #888; font-size: 14px; line-height: 1.7; }
+
+/* PROJECTS */
+.projects { background: var(--dark); }
+.projects-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
+.projects-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; }
+.project-img { overflow: hidden; position: relative; aspect-ratio: 4/3; }
+.project-img:nth-child(1) { grid-column: span 2; aspect-ratio: 16/9; }
+.project-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s, filter .3s; filter: brightness(.85); }
+.project-img:hover img { transform: scale(1.05); filter: brightness(1); }
+.project-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.5) 0%, transparent 60%); pointer-events: none; }
+
+/* TESTIMONIALS */
+.testimonials { background: var(--light-bg); }
+.testimonials .section-title { color: var(--dark); }
+.testimonials .section-label { color: #8a6f30; }
+.testimonials-sub { color: #666; max-width: 600px; margin: 16px 0 56px; font-size: 15px; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.review-card { background: var(--white); padding: 36px 32px; border-top: 4px solid var(--gold); box-shadow: 0 4px 24px rgba(0,0,0,.06); }
+.stars { color: var(--gold); font-size: 16px; margin-bottom: 16px; }
+.review-text { color: #444; font-size: 14px; line-height: 1.8; margin-bottom: 28px; font-style: italic; }
+.reviewer { display: flex; align-items: center; gap: 14px; }
+.reviewer img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+.reviewer-name { font-weight: 700; color: var(--dark); font-size: 14px; }
+.reviewer-loc { font-size: 12px; color: #888; }
+
+/* AREAS */
+.areas { background: var(--dark2); }
+.areas-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.areas-map img { width: 100%; border: 2px solid #333; }
+.area-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px 24px; margin-top: 24px; }
+.area-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #bbb; padding: 8px 0; border-bottom: 1px solid #2a2a2a; }
+.area-item::before { content: '▸'; color: var(--gold); }
+
+/* FAQ */
+.faq { background: var(--dark); }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 60px; }
+.faq-item { background: var(--dark3); padding: 40px 36px; border-left: 3px solid transparent; transition: border-color .2s, background .2s; }
+.faq-item:hover { border-left-color: var(--gold); background: #252525; }
+.faq-item h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: .5px; margin-bottom: 14px; text-transform: uppercase; }
+.faq-item p { color: #888; font-size: 14px; line-height: 1.7; }
+
+/* CTA BAND */
+.cta-band { background: var(--gold); padding: 72px 40px; text-align: center; }
+.cta-band h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 5vw, 64px); color: var(--dark); letter-spacing: 2px; margin-bottom: 16px; }
+.cta-band p { color: rgba(0,0,0,.65); font-size: 16px; max-width: 520px; margin: 0 auto 36px; }
+.btn-dark { display: inline-block; background: var(--dark); color: var(--gold); font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 16px 44px; text-decoration: none; transition: background .2s, transform .15s; }
+.btn-dark:hover { background: #222; transform: translateY(-2px); }
+
+/* CONTACT */
+.contact { background: var(--dark2); }
+.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.contact-info-col h2 { font-family: 'Bebas Neue', sans-serif; font-size: 56px; letter-spacing: 1px; line-height: 1; margin-bottom: 24px; }
+.contact-info-col p { color: #aaa; font-size: 15px; line-height: 1.8; margin-bottom: 40px; }
+.contact-detail { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.contact-detail .icon-box { width: 48px; height: 48px; background: var(--gold); color: var(--dark); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.contact-detail .text { font-size: 14px; color: #bbb; }
+.contact-detail .text strong { display: block; color: var(--white); font-size: 16px; margin-bottom: 2px; }
+.contact-form-box { background: var(--dark3); padding: 48px 40px; }
+.form-title { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 32px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #888; margin-bottom: 8px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; background: #1a1a1a; border: 1px solid #333; color: var(--white); padding: 14px 16px; font-family: 'Barlow', sans-serif; font-size: 14px; transition: border-color .2s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--gold); }
+.form-group select { appearance: none; cursor: pointer; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-check { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+.form-check input[type=checkbox] { margin-top: 3px; accent-color: var(--gold); flex-shrink: 0; }
+.form-check label { font-size: 12px; color: #777; line-height: 1.6; }
+.submit-btn { width: 100%; background: var(--gold); color: var(--dark); font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 16px; border: none; cursor: pointer; transition: background .2s; margin-top: 8px; }
+.submit-btn:hover { background: var(--gold-light); }
+.form-privacy { font-size: 11px; color: #555; text-align: center; margin-top: 12px; }
+.form-privacy a { color: var(--gray); }
+
+/* FOOTER */
+footer { background: #0d0d0d; border-top: 1px solid #1e1e1e; }
+.footer-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; padding: 72px 40px 48px; max-width: 1200px; margin: 0 auto; }
+.footer-brand img { height: 48px; margin-bottom: 20px; }
+.footer-brand p { color: #666; font-size: 13px; line-height: 1.8; max-width: 280px; }
+.footer-social { display: flex; gap: 12px; margin-top: 24px; }
+.social-btn { width: 38px; height: 38px; background: #1e1e1e; color: #888; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none; transition: background .2s, color .2s; }
+.social-btn:hover { background: var(--gold); color: var(--dark); }
+.footer-col h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul a { color: #666; text-decoration: none; font-size: 13px; transition: color .2s; }
+.footer-col ul a:hover { color: var(--gold); }
+.footer-col p { color: #666; font-size: 13px; line-height: 2; }
+.footer-bottom { border-top: 1px solid #1a1a1a; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+.footer-bottom p { font-size: 12px; color: #444; }
+.footer-bottom-links { display: flex; gap: 24px; }
+.footer-bottom-links a { font-size: 12px; color: #444; text-decoration: none; transition: color .2s; }
+.footer-bottom-links a:hover { color: var(--gold); }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.hero-content > * { animation: fadeUp .7s ease both; }
+.hero-content > *:nth-child(1) { animation-delay: .1s; }
+.hero-content > *:nth-child(2) { animation-delay: .25s; }
+.hero-content > *:nth-child(3) { animation-delay: .4s; }
+.hero-content > *:nth-child(4) { animation-delay: .55s; }
+.hero-content > *:nth-child(5) { animation-delay: .7s; }
+
+@media (max-width: 900px) {
+  .topbar { display: none; }
+  nav { padding: 0 20px; }
+  .nav-links, .nav-cta { display: none; }
+  section { padding: 64px 24px; }
+  .about-inner, .contact-inner, .areas-inner { grid-template-columns: 1fr; gap: 40px; }
+  .about-text { padding-left: 0; }
+  .about-img-badge { right: 0; bottom: 0; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr 1fr; }
+  .projects-grid .project-img:nth-child(1) { grid-column: span 2; }
+  .stats-bar { grid-template-columns: 1fr; }
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 40px; padding: 48px 24px 32px; }
+  .footer-bottom { flex-direction: column; gap: 12px; padding: 16px 24px; text-align: center; }
+  .form-row { grid-template-columns: 1fr; }
+  .hero-strip { display: none; }
+  .hero-content { padding: 60px 24px; }
+}
+```
+
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="contact-info">
+    <a href="mailto:info@mmepoxycoatings.com">✉ info@mmepoxycoatings.com</a>
+    <span style="color:#444">|</span>
+    <a href="tel:5165313050">📞 (516) 531-3050</a>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/share/1BSZoWN88q/?mibextid=wwXIfr" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/mmepoxycoatings" target="_blank">Instagram</a>
+    <a href="https://linktr.ee/mmepoxycoatings" target="_blank">Linktree</a>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-logo"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/6814669f5d4a8378e402ef2f.png" alt="M&M Epoxy Coatings"/></div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Free Estimate</a>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Long Island, NY</div>
+    <h1>M&amp;M<br/><span>Epoxy</span><br/>Coatings</h1>
+    <div class="hero-sub">Epoxy Flooring Specialists</div>
+    <p>We bring years of expertise transforming residential and commercial floors with premium flake and metallic epoxy coatings.</p>
+    <div class="hero-tagline">Durability <span>·</span> Style <span>·</span> Performance — built to last</div>
+    <a href="#contact" class="btn-primary">Get A Free Quote</a>
+    <a href="#projects" class="btn-outline">View Projects</a>
+  </div>
+  <div class="hero-strip">
+    <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68144b3f01c78b1e4d96454a.png" alt=""/>
+    <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68144bc6a1ba5a841bc33940.png" alt=""/>
+    <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68144b98eba7a34474186f93.webp" alt=""/>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">Years of Craftsmanship</div></div>
+  <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Customer Satisfaction</div></div>
+  <div class="stat-item"><div class="stat-num">96%</div><div class="stat-label">Projects Under 3 Days</div></div>
+</div>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-img-wrap">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68144d8301c78b646f96479d.jpeg" alt="Epoxy Floor"/>
+        <div class="about-img-badge"><div class="num">15+</div><div class="lbl">Years of<br/>Experience</div></div>
+      </div>
+      <div class="about-text">
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">Flawless Floors.<br/>Seamless Process.</h2>
+        <p>With years of experience and a passion for craftsmanship, M&M Epoxy Coatings delivers premium epoxy flooring solutions that enhance and protect your surfaces. Whether it's your garage, basement, retail space, or showroom — we make the process smooth from start to finish.</p>
+        <p>Our team is licensed, insured, and dedicated to delivering results that exceed your expectations on every project.</p>
+        <a href="#contact" class="btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Our Process</h2>
+    <div class="process-grid">
+      <div class="process-step" data-num="01"><div class="step-num">Step 01</div><div class="process-icon">📋</div><h3>Free On-Site Estimate</h3><p>We come to you, assess your space, and provide a transparent, no-obligation quote with no hidden fees.</p></div>
+      <div class="process-step" data-num="02"><div class="step-num">Step 02</div><div class="process-icon">🔧</div><h3>Surface Prep &amp; Repairs</h3><p>We diamond grind the surface and address cracks or imperfections for a flawless bond.</p></div>
+      <div class="process-step" data-num="03"><div class="step-num">Step 03</div><div class="process-icon">🎨</div><h3>Flake or Metallic Application</h3><p>We apply your chosen system — flake, metallic, quartz, or solid color — with precision and care.</p></div>
+      <div class="process-step" data-num="04"><div class="step-num">Step 04</div><div class="process-icon">✅</div><h3>Top Coat &amp; Walkthrough</h3><p>A durable top coat seals the floor, followed by a full walkthrough to ensure your complete satisfaction.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:48px;"><a href="#contact" class="btn-primary">Request a Free Estimate</a></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title" style="color:var(--dark)">Our Services</h2>
+    <p style="color:#666;margin-top:16px;max-width:520px;font-size:15px;">Our team is dedicated to delivering high-quality results that exceed your expectations across every project type.</p>
+    <div class="services-grid">
+      <div class="service-card"><div class="icon">🏠</div><h3>Epoxy Flake Floors</h3><p>Decorative vinyl flake systems that are durable, slip-resistant, and available in dozens of color combinations.</p></div>
+      <div class="service-card"><div class="icon">✨</div><h3>Metallic Epoxy Floors</h3><p>Stunning, one-of-a-kind swirling metallic finishes that transform any space into a showroom environment.</p></div>
+      <div class="service-card"><div class="icon">🔲</div><h3>Epoxy Countertops</h3><p>Customized countertop resurfacing with metallic or solid color epoxy — a durable, affordable alternative.</p></div>
+      <div class="service-card"><div class="icon">💎</div><h3>Quartz Epoxy Floors</h3><p>Quartz-broadcast systems providing extreme durability and chemical resistance for high-traffic areas.</p></div>
+      <div class="service-card"><div class="icon">🎨</div><h3>Solid Color Epoxy Floors</h3><p>Clean, professional solid color epoxy coatings in a wide range of custom colors for any space.</p></div>
+      <div class="service-card"><div class="icon">⬛</div><h3>Polished Concrete</h3><p>Mechanically polished concrete floors with a sleek, modern aesthetic and unbeatable long-term durability.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why-us">
+  <div class="container">
+    <div class="section-label">Our Promise</div>
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="why-grid">
+      <div class="why-item"><div class="why-icon">⏱</div><div><h4>Reliable &amp; On-Time</h4><p>We stick to our schedule and show up when promised — completing most epoxy floors in just 1–3 days.</p></div></div>
+      <div class="why-item"><div class="why-icon">🎨</div><div><h4>Customized Flooring Solutions</h4><p>From color to texture, every floor is designed to meet your unique vision and space requirements.</p></div></div>
+      <div class="why-item"><div class="why-icon">🛡</div><div><h4>Licensed &amp; Insured Pros</h4><p>Fully licensed and insured to operate throughout Long Island, NY. Your investment is protected.</p></div></div>
+      <div class="why-item"><div class="why-icon">💬</div><div><h4>Honest, Transparent Pricing</h4><p>No hidden fees. We provide up-front quotes and clear expectations before we begin.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="projects-header">
+      <div><div class="section-label">Portfolio</div><h2 class="section-title">Our Projects</h2></div>
+      <a href="#contact" class="btn-primary">Get A Quote</a>
+    </div>
+    <p style="color:#888;margin-bottom:40px;max-width:600px;font-size:15px;">At M&amp;M Epoxy Coatings, we take pride in every flake, swirl, and top coat. Our work speaks for itself — combining function and style across garages, basements, retail stores, and more.</p>
+    <div class="projects-grid">
+      <div class="project-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68145090eba7a374601879cd.jpeg" alt="Project"/></div>
+      <div class="project-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68145090dde4a4da25f1a1e0.jpeg" alt="Project"/></div>
+      <div class="project-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/6814509088b94e4a7e0486f5.jpeg" alt="Project"/></div>
+      <div class="project-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68145090a1ba5aacc1c34263.jpeg" alt="Project"/></div>
+      <div class="project-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68145090a1ba5a09c9c34262.jpeg" alt="Project"/></div>
+      <div class="project-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/6814509088b94e43cf0486f6.jpeg" alt="Project"/></div>
+      <div class="project-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/681469b1a1ba5a6346c366d6.jpeg" alt="Project"/></div>
+      <div class="project-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/6814509001c78be1d8965270.jpeg" alt="Project"/></div>
+      <div class="project-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/6814509001c78b36ce965271.jpeg" alt="Project"/></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-label">Reviews</div>
+    <h2 class="section-title" style="color:var(--dark)">Testimonials</h2>
+    <p class="testimonials-sub">Read what Long Island homeowners and business owners are saying about M&amp;M Epoxy Coatings:</p>
+    <div class="testimonials-grid">
+      <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Absolutely flawless work on our garage floor. The flake system looks incredible and cleans up so easily. Highly recommend!"</p><div class="reviewer"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/7d11ee67-b999-4eab-8853-9c7b602ef1ed.webp" alt="Anthony R"/><div><div class="reviewer-name">Anthony R.</div><div class="reviewer-loc">Nassau County</div></div></div></div>
+      <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Fast, clean, and detail-oriented. They finished our basement in two days. Couldn't be happier with the results."</p><div class="reviewer"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/f64707c5-8a63-49ed-a593-a16351d99e76.webp" alt="Michael G"/><div><div class="reviewer-name">Michael G.</div><div class="reviewer-loc">Suffolk County</div></div></div></div>
+      <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"I manage a small auto shop, and our floors were in bad shape. M&amp;M made them look brand new — durable, slip-resistant, and easy to clean."</p><div class="reviewer"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/8284914e-2f10-4948-bab6-05e443675262.webp" alt="Tyler S"/><div><div class="reviewer-name">Tyler S.</div><div class="reviewer-loc">Bay Shore</div></div></div></div>
+      <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"We had metallic epoxy installed in our salon — clients compliment it every day. Super professional crew!"</p><div class="reviewer"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/9b12ef49-53f2-4309-bb9c-20dc651c2a61.webp" alt="Brianna S"/><div><div class="reviewer-name">Brianna S.</div><div class="reviewer-loc">Owner, Luce Beauty Lounge</div></div></div></div>
+      <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"From the first quote to the final walkthrough, Ian and his team were top-notch. Transparent pricing and no upsells."</p><div class="reviewer"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/81bd6ecc-5056-49e0-a144-ec2d34c4e9fe.webp" alt="Kristin P"/><div><div class="reviewer-name">Kristin P.</div><div class="reviewer-loc">East Meadow</div></div></div></div>
+      <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"We had our kitchen floor redone with metallic epoxy, and it completely transformed the space. Professional, punctual, and respectful of our home."</p><div class="reviewer"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/465a4398-ad7e-48ee-9de9-827ef367939b.webp" alt="Jessica M"/><div><div class="reviewer-name">Jessica M.</div><div class="reviewer-loc">Huntington</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div>
+        <div class="section-label">Where We Work</div>
+        <h2 class="section-title">Our Service Areas</h2>
+        <p style="color:#888;margin-top:16px;font-size:15px;line-height:1.8;">We proudly serve homeowners and businesses across Long Island and surrounding areas.</p>
+        <div class="area-grid">
+          <div class="area-item">Nassau County, NY</div>
+          <div class="area-item">Suffolk County, NY</div>
+          <div class="area-item">Queens, NY</div>
+          <div class="area-item">Brooklyn, NY</div>
+          <div class="area-item">The Hamptons, NY</div>
+          <div class="area-item">Long Beach, NY</div>
+          <div class="area-item">Garden City, NY</div>
+          <div class="area-item">Hempstead, NY</div>
+          <div class="area-item">Bayshore, NY</div>
+          <div class="area-item">Huntington, NY</div>
+        </div>
+        <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:36px;">Check Your Area</a>
+      </div>
+      <div><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://firebasestorage.googleapis.com/v0/b/highlevel-backend.appspot.com/o/location%2FirodyEt2D1fCe2HoDaKw%2Fimages%2FFfWNJsF3BmYYc9yxKzFB%2FChIJOwg_06VPwokRYv534QaPC8g%2Fmap-lmRwFKLFWF.jpg?alt=media" alt="Service Area Map" style="width:100%;border:2px solid #333;"/></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div style="text-align:center"><div class="section-label" style="text-align:center">Still Not Sure?</div><h2 class="section-title" style="text-align:center">Frequently Asked Questions</h2></div>
+    <div class="faq-grid">
+      <div class="faq-item"><h4>What types of epoxy services do you offer?</h4><p>We specialize in epoxy flake floors, metallic epoxy, quartz blends, solid color systems, and epoxy countertops for both residential and commercial properties.</p></div>
+      <div class="faq-item"><h4>How long does it take to complete a project?</h4><p>Most epoxy flooring projects are completed in 1 to 3 days depending on size, prep needs, and chosen finish.</p></div>
+      <div class="faq-item"><h4>Do your floors come with a warranty?</h4><p>Yes. All of our floors include a workmanship guarantee and material warranties where applicable. We stand behind our work.</p></div>
+      <div class="faq-item"><h4>Do you offer free estimates?</h4><p>Absolutely. We provide no-obligation, on-site estimates at no cost — with transparent pricing and honest recommendations.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Ready to Transform Your Floor?</h2>
+  <p>Our team is ready to help you bring your space to life. Get a free, no-obligation estimate today.</p>
+  <a href="#contact" class="btn-dark">Contact Us Now</a>
+</div>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info-col">
+        <div class="section-label">Get In Touch</div>
+        <h2>We Offer Free Estimates!</h2>
+        <p>When you need expert epoxy flooring or countertop services in Long Island, our team is ready to guide you every step of the way.</p>
+        <div class="contact-detail"><div class="icon-box">📞</div><div class="text"><strong>(516) 531-3050</strong>Call or Text Anytime</div></div>
+        <div class="contact-detail"><div class="icon-box">✉</div><div class="text"><strong>info@mmepoxycoatings.com</strong>We reply within 24 hours</div></div>
+        <div class="contact-detail"><div class="icon-box">📍</div><div class="text"><strong>Long Island, NY</strong>Serving all surrounding areas</div></div>
+      </div>
+      <div class="contact-form-box">
+        <div class="form-title">Your Dream Floor, One Click Away!</div>
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group"><label>First Name *</label><input type="text" placeholder="John" required/></div>
+            <div class="form-group"><label>Last Name *</label><input type="text" placeholder="Doe" required/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone *</label><input type="tel" placeholder="(516) 000-0000" required/></div>
+            <div class="form-group"><label>Email *</label><input type="email" placeholder="john@email.com" required/></div>
+          </div>
+          <div class="form-group"><label>What County are you located in?</label><select><option value="">Select a county...</option><option>Suffolk County, NY</option><option>Nassau County, NY</option><option>Neither, Different County</option></select></div>
+          <div class="form-group"><label>How soon are you looking to start? *</label><select required><option value="">Select timeframe...</option><option>ASAP</option><option>Within 1 month</option><option>1–3 months</option><option>3+ months</option><option>Just getting a quote</option></select></div>
+          <div class="form-check"><input type="checkbox" id="c1"/><label for="c1">By checking this box, I consent to receive transactional messages. Message & Data rates may apply. Reply STOP to opt-out.</label></div>
+          <div class="form-check"><input type="checkbox" id="c2"/><label for="c2">By checking this box, I consent to receive marketing and promotional messages. Reply STOP to opt-out.</label></div>
+          <button type="submit" class="submit-btn">Submit — Get My Free Estimate</button>
+          <p class="form-privacy"><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/6814669f5d4a8378e402ef2f.png" alt="M&M Epoxy Coatings"/>
+      <p>With years of hands-on experience, we transform floors with seamless, durable, and visually striking epoxy solutions tailored to your project goals.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/1BSZoWN88q/?mibextid=wwXIfr" class="social-btn" target="_blank">f</a>
+        <a href="https://www.instagram.com/mmepoxycoatings" class="social-btn" target="_blank">ig</a>
+        <a href="https://linktr.ee/mmepoxycoatings" class="social-btn" target="_blank">🔗</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Menu</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Links</h4><ul><li><a href="#">Terms of Use</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Cookie Policy</a></li></ul></div>
+    <div class="footer-col"><h4>Contact Info</h4><p><a href="tel:5165313050" style="color:#666;text-decoration:none">(516) 531-3050</a></p><p><a href="mailto:info@mmepoxycoatings.com" style="color:#666;text-decoration:none">info@mmepoxycoatings.com</a></p><p style="margin-top:12px">Long Island, NY</p></div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="footer-bottom">
+      <p>© 2026. M&amp;M Epoxy Coatings. All Rights Reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.submit-btn');
+    btn.textContent = '✓ Submitted! We\'ll be in touch soon.';
+    btn.style.background = '#2d6a4f'; btn.style.color = '#fff'; btn.disabled = true;
+  }
+</script>
+
+</body>
+</html>
