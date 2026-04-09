@@ -65,4 +65,299 @@
     .about-badge { position: absolute; bottom: 40px; right: -30px; background: var(--gold); color: var(--bg); padding: 28px 32px; text-align: center; }
     .about-badge .big { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; line-height: 1; }
     .about-badge .small { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
-    .about-content p { color: var(--muted); font-size: 15px; line-height: 1.9; margin: 24px 0 36​​​​​​​​​​​​​​​​
+    .about-content p { color: var(--muted); font-size: 15px; line-height: 1.9; margin: 24px 0 36px; }
+    .about-features { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+    .about-feature { display: flex; align-items: center; gap: 14px; font-size: 14px; color: var(--text); }
+    .about-feature::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+    .services { background: var(--bg); }
+    .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 64px; }
+    .services-list { display: flex; flex-direction: column; }
+    .svc-row { display: grid; grid-template-columns: 80px 1fr 1fr auto; align-items: center; gap: 40px; padding: 32px 0; border-top: 1px solid var(--border); cursor: default; }
+    .svc-row:last-child { border-bottom: 1px solid var(--border); }
+    .svc-row:hover .svc-name { color: var(--gold); }
+    .svc-num { font-family: 'Playfair Display', serif; font-size: 14px; color: var(--muted); }
+    .svc-name { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; transition: color .3s; }
+    .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .svc-arrow { font-size: 20px; color: var(--muted); transition: color .3s, transform .3s; }
+    .svc-row:hover .svc-arrow { color: var(--gold); transform: translateX(4px); }
+    .process { background: var(--bg2); }
+    .process-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; margin-top: 64px; }
+    .pstep { background: var(--bg3); padding: 48px 32px; position: relative; overflow: hidden; }
+    .pstep::before { content: attr(data-n); font-family: 'Playfair Display', serif; font-size: 100px; font-weight: 900; color: rgba(201,168,76,.05); position: absolute; top: -10px; right: 10px; line-height: 1; }
+    .pstep-num { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .pstep h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 14px; line-height: 1.3; }
+    .pstep p { font-size: 13px; color: var(--muted); line-height: 1.8; }
+    .gallery { background: var(--bg); padding: 0; }
+    .gallery-header { padding: 80px 60px 48px; display: flex; justify-content: space-between; align-items: flex-end; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4,1fr); grid-template-rows: 280px 280px; gap: 3px; }
+    .g-img { overflow: hidden; position: relative; }
+    .g-img:nth-child(1) { grid-row: span 2; }
+    .g-img:nth-child(4) { grid-column: span 2; }
+    .g-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s, filter .3s; filter: brightness(.8); }
+    .g-img:hover img { transform: scale(1.06); filter: brightness(1); }
+    .testimonials { background: var(--bg2); }
+    .testi-header { margin-bottom: 64px; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .tcard { background: var(--bg3); padding: 40px 36px; border: 1px solid var(--border); transition: border-color .2s; }
+    .tcard:hover { border-color: var(--gold); }
+    .tcard-quote { font-family: 'Playfair Display', serif; font-size: 60px; color: var(--gold); opacity: .3; line-height: .8; margin-bottom: 16px; }
+    .tcard p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 28px; font-style: italic; }
+    .tcard-person { display: flex; align-items: center; gap: 12px; }
+    .tcard-person img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); }
+    .tcard-name { font-size: 14px; font-weight: 600; }
+    .tcard-loc { font-size: 12px; color: var(--muted); }
+    .cta { background: var(--gold); padding: 100px 60px; text-align: center; }
+    .cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(36px,4vw,60px); font-weight: 900; color: var(--bg); margin-bottom: 20px; }
+    .cta p { font-size: 16px; color: rgba(0,0,0,.6); max-width: 480px; margin: 0 auto 40px; line-height: 1.7; }
+    .btn-dark2 { display: inline-block; background: var(--bg); color: var(--gold); font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 16px 44px; text-decoration: none; transition: background .2s; }
+    .btn-dark2:hover { background: #111; }
+    .contact { background: var(--bg); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+    .contact-left h2 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; margin: 20px 0 24px; line-height: 1.1; }
+    .contact-left h2 em { font-style: italic; color: var(--gold); }
+    .contact-left p { color: var(--muted); font-size: 15px; line-height: 1.8; margin-bottom: 40px; }
+    .cinfo { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+    .cinfo-icon { width: 44px; height: 44px; border: 1px solid var(--gold); color: var(--gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cinfo-text strong { display: block; font-size: 15px; color: var(--text); }
+    .cinfo-text span { font-size: 12px; color: var(--muted); }
+    .contact-form { background: var(--bg2); padding: 48px 40px; border: 1px solid var(--border); }
+    .cf-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 32px; }
+    .fg { margin-bottom: 18px; }
+    .fg label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .fg input, .fg select, .fg textarea { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 14px 16px; font-family: 'DM Sans', sans-serif; font-size: 14px; transition: border-color .2s; }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--gold); }
+    .fg textarea { resize: vertical; min-height: 90px; }
+    .fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .fcheck { display: flex; gap: 10px; margin-bottom: 10px; font-size: 12px; color: #555; line-height: 1.6; }
+    .fcheck input { accent-color: var(--gold); margin-top: 3px; flex-shrink: 0; }
+    .fsub { width: 100%; background: var(--gold); color: var(--bg); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 16px; border: none; cursor: pointer; margin-top: 8px; transition: background .2s; }
+    .fsub:hover { background: var(--gold2); }
+    footer { background: var(--bg2); border-top: 1px solid var(--border); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; padding: 80px 60px 48px; max-width: 1200px; margin: 0 auto; }
+    .fbrand .logo-text { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--text); margin-bottom: 16px; display: block; }
+    .fbrand .logo-text span { color: var(--gold); }
+    .fbrand p { color: var(--muted); font-size: 13px; line-height: 1.8; max-width: 260px; }
+    .fsocial { display: flex; gap: 10px; margin-top: 24px; }
+    .fsoc { width: 36px; height: 36px; border: 1px solid var(--border); color: var(--muted); display: flex; align-items: center; justify-content: center; font-size: 13px; text-decoration: none; transition: border-color .2s, color .2s; }
+    .fsoc:hover { border-color: var(--gold); color: var(--gold); }
+    .fcol h4 { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .fcol ul { list-style: none; }
+    .fcol ul li { margin-bottom: 10px; }
+    .fcol ul a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .2s; }
+    .fcol ul a:hover { color: var(--text); }
+    .fcol p { color: var(--muted); font-size: 13px; line-height: 2.2; }
+    .fbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; border-top: 1px solid var(--border); max-width: 1200px; margin: 0 auto; font-size: 12px; color: #333; }
+    .fbar a { color: #333; text-decoration: none; }
+    .fbar a:hover { color: var(--gold); }
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links, .nav-btn { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { height: 50vw; }
+      .hero-right::after { background: linear-gradient(0deg, var(--bg) 0%, transparent 50%); }
+      .hero-left { padding: 120px 24px 40px; }
+      .hero-stats { left: 24px; bottom: 24px; gap: 24px; }
+      section { padding: 80px 24px; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-badge { right: 0; }
+      .services-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .svc-row { grid-template-columns: 60px 1fr; }
+      .svc-desc, .svc-arrow { display: none; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .g-img { aspect-ratio: 4/3; }
+      .g-img:nth-child(1) { grid-row: auto; }
+      .g-img:nth-child(4) { grid-column: auto; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; padding: 48px 24px 32px; }
+      .fbar { flex-direction: column; gap: 8px; padding: 16px 24px; text-align: center; }
+      .fg-row { grid-template-columns: 1fr; }
+      .gallery-header { padding: 60px 24px 32px; flex-direction: column; align-items: flex-start; gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">M<span>&</span>M Epoxy Coatings</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-btn">Free Estimate</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow"><span>Long Island, NY · Since 2009</span></div>
+    <h1>Premium<br/><em>Epoxy</em><br/>Flooring.</h1>
+    <p>Transforming residential and commercial spaces across Long Island with handcrafted epoxy coatings built for durability and beauty.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-fill">Get Free Estimate</a>
+      <a href="#gallery" class="btn-ghost">View Our Work →</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68144a2adde4a4b9f6f197f2.jpeg" alt="Epoxy Floor"/>
+  </div>
+  <div class="hero-stats">
+    <div class="h-stat"><div class="h-stat-num">15+</div><div class="h-stat-label">Years Experience</div></div>
+    <div class="h-stat"><div class="h-stat-num">98%</div><div class="h-stat-label">Satisfaction Rate</div></div>
+    <div class="h-stat"><div class="h-stat-num">1–3</div><div class="h-stat-label">Day Completion</div></div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span>Epoxy Flake Floors</span><span>Metallic Epoxy</span><span>Quartz Systems</span><span>Polished Concrete</span><span>Epoxy Countertops</span><span>Long Island NY</span>
+    <span>Epoxy Flake Floors</span><span>Metallic Epoxy</span><span>Quartz Systems</span><span>Polished Concrete</span><span>Epoxy Countertops</span><span>Long Island NY</span>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68144d8301c78b646f96479d.jpeg" alt="About"/>
+        <div class="about-badge"><div class="big">15+</div><div class="small">Years of<br/>Excellence</div></div>
+      </div>
+      <div class="about-content">
+        <div class="eyebrow"><span>About M&amp;M Epoxy</span></div>
+        <h2 class="display">Flawless Floors.<br/><em>Seamless Process.</em></h2>
+        <p>With years of experience and a passion for craftsmanship, M&M Epoxy Coatings delivers premium epoxy flooring solutions that enhance and protect your surfaces. Whether it's your garage, basement, retail space, or showroom.</p>
+        <div class="about-features">
+          <div class="about-feature">Licensed &amp; Insured throughout Long Island, NY</div>
+          <div class="about-feature">1–3 day project completion, no downtime</div>
+          <div class="about-feature">Transparent, up-front pricing — no surprises</div>
+          <div class="about-feature">Workmanship guarantee on every floor</div>
+        </div>
+        <a href="#contact" class="btn-fill">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <div><div class="eyebrow"><span>What We Do</span></div><h2 class="display">Our <em>Services</em></h2></div>
+      <a href="#contact" class="btn-fill" style="white-space:nowrap">Get A Quote</a>
+    </div>
+    <div class="services-list">
+      <div class="svc-row"><div class="svc-num">01</div><div class="svc-name">Epoxy Flake Floors</div><div class="svc-desc">Decorative vinyl flake systems that are durable, slip-resistant, and available in dozens of color combinations.</div><div class="svc-arrow">→</div></div>
+      <div class="svc-row"><div class="svc-num">02</div><div class="svc-name">Metallic Epoxy Floors</div><div class="svc-desc">Stunning swirling metallic finishes that transform any space into a showroom-worthy environment.</div><div class="svc-arrow">→</div></div>
+      <div class="svc-row"><div class="svc-num">03</div><div class="svc-name">Epoxy Countertops</div><div class="svc-desc">Customized countertop resurfacing — a durable, affordable alternative to traditional replacement.</div><div class="svc-arrow">→</div></div>
+      <div class="svc-row"><div class="svc-num">04</div><div class="svc-name">Quartz Epoxy Floors</div><div class="svc-desc">Extreme durability and chemical resistance ideal for commercial kitchens and high-traffic areas.</div><div class="svc-arrow">→</div></div>
+      <div class="svc-row"><div class="svc-num">05</div><div class="svc-name">Solid Color Epoxy Floors</div><div class="svc-desc">Clean, professional solid color coatings in a wide range of custom colors for any space.</div><div class="svc-arrow">→</div></div>
+      <div class="svc-row"><div class="svc-num">06</div><div class="svc-name">Polished Concrete</div><div class="svc-desc">Mechanically polished concrete floors offering a sleek modern aesthetic with unbeatable durability.</div><div class="svc-arrow">→</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="container">
+    <div class="eyebrow"><span>How It Works</span></div>
+    <h2 class="display">Our <em>Process</em></h2>
+    <div class="process-steps">
+      <div class="pstep" data-n="1"><div class="pstep-num">Step 01</div><h3>Free On-Site Estimate</h3><p>We come to you, assess your space, and provide a transparent no-obligation quote with zero hidden fees.</p></div>
+      <div class="pstep" data-n="2"><div class="pstep-num">Step 02</div><h3>Surface Prep &amp; Repairs</h3><p>Diamond grinding and crack repair ensures a perfect foundation and flawless adhesion.</p></div>
+      <div class="pstep" data-n="3"><div class="pstep-num">Step 03</div><h3>Flake or Metallic Application</h3><p>Your chosen system is applied with precision — flake, metallic, quartz, or solid color.</p></div>
+      <div class="pstep" data-n="4"><div class="pstep-num">Step 04</div><h3>Top Coat &amp; Walkthrough</h3><p>A durable top coat seals the floor, followed by a detailed walkthrough to ensure your satisfaction.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="gallery" id="gallery">
+  <div class="gallery-header container">
+    <div><div class="eyebrow"><span>Portfolio</span></div><h2 class="display">Our <em>Projects</em></h2></div>
+    <a href="#contact" class="btn-fill">Start Your Project</a>
+  </div>
+  <div class="gallery-grid">
+    <div class="g-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68145090eba7a374601879cd.jpeg" alt="Project"/></div>
+    <div class="g-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68145090dde4a4da25f1a1e0.jpeg" alt="Project"/></div>
+    <div class="g-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/6814509088b94e4a7e0486f5.jpeg" alt="Project"/></div>
+    <div class="g-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/68145090a1ba5aacc1c34263.jpeg" alt="Project"/></div>
+    <div class="g-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/6814509088b94e43cf0486f6.jpeg" alt="Project"/></div>
+    <div class="g-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/681469b1a1ba5a6346c366d6.jpeg" alt="Project"/></div>
+    <div class="g-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/6814509001c78be1d8965270.jpeg" alt="Project"/></div>
+  </div>
+</div>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="testi-header"><div class="eyebrow"><span>Reviews</span></div><h2 class="display">What Clients <em>Say</em></h2></div>
+    <div class="testi-grid">
+      <div class="tcard"><div class="tcard-quote">"</div><p>"Absolutely flawless work on our garage floor. The flake system looks incredible and cleans up so easily. Highly recommend!"</p><div class="tcard-person"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/7d11ee67-b999-4eab-8853-9c7b602ef1ed.webp" alt="Anthony R"/><div><div class="tcard-name">Anthony R.</div><div class="tcard-loc">Nassau County</div></div></div></div>
+      <div class="tcard"><div class="tcard-quote">"</div><p>"Fast, clean, and detail-oriented. They finished our basement in two days. Couldn't be happier with the results."</p><div class="tcard-person"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/f64707c5-8a63-49ed-a593-a16351d99e76.webp" alt="Michael G"/><div><div class="tcard-name">Michael G.</div><div class="tcard-loc">Suffolk County</div></div></div></div>
+      <div class="tcard"><div class="tcard-quote">"</div><p>"From the first quote to the final walkthrough, Ian and his team were top-notch. Transparent pricing and no upsells."</p><div class="tcard-person"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/81bd6ecc-5056-49e0-a144-ec2d34c4e9fe.webp" alt="Kristin P"/><div><div class="tcard-name">Kristin P.</div><div class="tcard-loc">East Meadow</div></div></div></div>
+      <div class="tcard"><div class="tcard-quote">"</div><p>"We had metallic epoxy installed in our salon — clients compliment it every day. Super professional crew!"</p><div class="tcard-person"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/9b12ef49-53f2-4309-bb9c-20dc651c2a61.webp" alt="Brianna S"/><div><div class="tcard-name">Brianna S.</div><div class="tcard-loc">Owner, Luce Beauty Lounge</div></div></div></div>
+      <div class="tcard"><div class="tcard-quote">"</div><p>"I manage a small auto shop — M&amp;M made our floors look brand new. Durable, slip-resistant, easy to clean."</p><div class="tcard-person"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/8284914e-2f10-4948-bab6-05e443675262.webp" alt="Tyler S"/><div><div class="tcard-name">Tyler S.</div><div class="tcard-loc">Bay Shore</div></div></div></div>
+      <div class="tcard"><div class="tcard-quote">"</div><p>"The metallic epoxy completely transformed our kitchen. Professional, punctual, and very respectful of our home."</p><div class="tcard-person"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/irodyEt2D1fCe2HoDaKw/media/465a4398-ad7e-48ee-9de9-827ef367939b.webp" alt="Jessica M"/><div><div class="tcard-name">Jessica M.</div><div class="tcard-loc">Huntington</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>Ready to Transform Your Floor?</h2>
+  <p>Our team is ready to guide you from estimate to final walkthrough. Free, no-obligation quotes for all projects.</p>
+  <a href="#contact" class="btn-dark2">Get My Free Estimate</a>
+</div>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="eyebrow"><span>Get In Touch</span></div>
+        <h2>We Offer <em>Free</em> Estimates!</h2>
+        <p>Fill out the form or call us directly — we'll guide you every step of the way, from concept to completion.</p>
+        <div class="cinfo"><div class="cinfo-icon">📞</div><div class="cinfo-text"><strong>(516) 531-3050</strong><span>Call or Text Anytime</span></div></div>
+        <div class="cinfo"><div class="cinfo-icon">✉</div><div class="cinfo-text"><strong>info@mmepoxycoatings.com</strong><span>Reply within 24 hours</span></div></div>
+        <div class="cinfo"><div class="cinfo-icon">📍</div><div class="cinfo-text"><strong>Long Island, NY</strong><span>Serving all surrounding areas</span></div></div>
+      </div>
+      <div class="contact-form">
+        <div class="cf-title">Start Your Project</div>
+        <form onsubmit="sub(event)">
+          <div class="fg-row"><div class="fg"><label>First Name *</label><input type="text" placeholder="John" required/></div><div class="fg"><label>Last Name *</label><input type="text" placeholder="Doe" required/></div></div>
+          <div class="fg-row"><div class="fg"><label>Phone *</label><input type="tel" placeholder="(516) 000-0000" required/></div><div class="fg"><label>Email *</label><input type="email" placeholder="john@email.com" required/></div></div>
+          <div class="fg"><label>County</label><select><option value="">Select...</option><option>Suffolk County, NY</option><option>Nassau County, NY</option><option>Other</option></select></div>
+          <div class="fg"><label>Project Timeline *</label><select required><option value="">Select...</option><option>ASAP</option><option>Within 1 month</option><option>1–3 months</option><option>Just exploring</option></select></div>
+          <div class="fcheck"><input type="checkbox" id="c1"/><label for="c1">I consent to receive transactional messages. Reply STOP to opt-out.</label></div>
+          <div class="fcheck"><input type="checkbox" id="c2"/><label for="c2">I consent to receive marketing messages. Reply STOP to opt-out.</label></div>
+          <button type="submit" class="fsub">Submit — Get Free Estimate</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="fbrand">
+      <span class="logo-text">M<span>&</span>M Epoxy Coatings</span>
+      <p>Transforming floors with seamless, durable, and visually striking epoxy solutions tailored to your project goals. Long Island, NY.</p>
+      <div class="fsocial">
+        <a href="https://www.facebook.com/share/1BSZoWN88q/" class="fsoc" target="_blank">f</a>
+        <a href="https://www.instagram.com/mmepoxycoatings" class="fsoc" target="_blank">ig</a>
+        <a href="https://linktr.ee/mmepoxycoatings" class="fsoc" target="_blank">🔗</a>
+      </div>
+    </div>
+    <div class="fcol"><h4>Pages</h4><ul><li><a href="#">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#gallery">Projects</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div class="fcol"><h4>Legal</h4><ul><li><a href="#">Terms of Use</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Cookie Policy</a></li></ul></div>
+    <div class="fcol"><h4>Contact</h4><p>(516) 531-3050</p><p>info@mmepoxycoatings.com</p><p>Long Island, NY</p></div>
+  </div>
+  <div class="fbar">
+    <p>© 2026 M&amp;M Epoxy Coatings. All Rights Reserved.</p>
+    <div style="display:flex;gap:20px"><a href="#">Privacy</a><a href="#">Terms</a></div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => { const t = document.querySelector(a.getAttribute('href')); if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); } });
+  });
+  function sub(e) { e.preventDefault(); const b = e.target.querySelector('.fsub'); b.textContent='✓ Submitted! We\'ll be in touch.'; b.style.background='#2d6a4f'; b.style.color='#fff'; b.disabled=true; }
+</script>
+</body>
+</html>
